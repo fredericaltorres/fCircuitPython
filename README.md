@@ -1,6 +1,6 @@
 # fCircuitPython
 
-* my CircuitPython Experiment
+* my CircuitPython Experiments
 
 ## Links
 
