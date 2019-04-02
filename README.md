@@ -30,3 +30,6 @@ bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\ada
 
 ## MU Editor
 - [Tutorials](https://codewith.mu/en/tutorials/)
+
+## Library
+* adafruit_ht16k33, How to search for source of library https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33
