@@ -31,7 +31,10 @@ bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\ada
 ## MU Editor
 - [Tutorials](https://codewith.mu/en/tutorials/)
 
-## Library
+## How to search for library source code
 * [adafruit_ht16k33, How to search for source of library](https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33)
 * [Adafruit_CircuitPython_IS31FL3731 How to search for the source of the library](https://github.com/search?q=org%3Aadafruit+adafruit_is31)
-* https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731
+
+## Library
+* [Adafruit_CircuitPython_IS31FL3731](https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731)
+
