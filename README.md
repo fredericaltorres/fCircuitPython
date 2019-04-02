@@ -38,3 +38,6 @@ bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\ada
 ## Library
 * [Adafruit_CircuitPython_IS31FL3731](https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731)
 
+## Board
+[Adafruit Feather M0 Basic Proto](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
+
