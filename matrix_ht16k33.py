@@ -24,7 +24,7 @@ def matrixGo():
         for c in range(8):
             matrix[r, c] = 1
             matrix.show()
-            time.sleep(0.09)
+            time.sleep(0.03)
 
 class Program:
     def __init__(self):
