@@ -2,11 +2,18 @@
 
 * my CircuitPython Experiments
 
-## Links
+## Board
+### Adafruit Feather M0 Basic Proto
+- [Overview](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
+- [Product]([Adafruit Feather M0 Device]https://www.adafruit.com/product/2772)
+
+### Circuit Playground Express With M0 Processor and 2Mb of Flash 
+- [Overview](https://learn.adafruit.com/adafruit-circuit-playground-express)
+- [Product](https://www.adafruit.com/product/3333)
+
+## Getting Started
 
 [Adafruit Feather M0 - circuitpython - Getting Started](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/kattni-circuitpython)
-
-[Adafruit Feather M0 Device]https://www.adafruit.com/product/2772
 
 ### Firmware
 - [Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
@@ -49,10 +56,4 @@ bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\ada
 
 [Storage](https://learn.adafruit.com/circuitpython-essentials/circuitpython-storage)
 
-## Board
-### Adafruit Feather M0 Basic Proto
-- [Overview](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
 
-### Circuit Playground Express With M0 Processor and 2Mb of Flash 
-- [Overview](https://learn.adafruit.com/adafruit-circuit-playground-express)
-- [Product](https://www.adafruit.com/product/3333)
