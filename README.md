@@ -5,7 +5,7 @@
 ## Board
 ### Adafruit Feather M0 Basic Proto
 - [Overview](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
-- [Product]([Adafruit Feather M0 Device]https://www.adafruit.com/product/2772)
+- [Product]https://www.adafruit.com/product/2772)
 
 ### Circuit Playground Express With M0 Processor and 2Mb of Flash 
 - [Overview](https://learn.adafruit.com/adafruit-circuit-playground-express)
