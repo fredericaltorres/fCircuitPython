@@ -45,8 +45,14 @@ bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\ada
 ## MU Editor
 - [Tutorials](https://codewith.mu/en/tutorials/)
 
+## About the 2 Mb Flash
 
+[Storage](https://learn.adafruit.com/circuitpython-essentials/circuitpython-storage)
 
 ## Board
-[Adafruit Feather M0 Basic Proto](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
+### Adafruit Feather M0 Basic Proto
+- [Overview](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
 
+### Circuit Playground Express With M0 Processor and 2Mb of Flash 
+- [Overview](https://learn.adafruit.com/adafruit-circuit-playground-express)
+- [Product](https://www.adafruit.com/product/3333)
