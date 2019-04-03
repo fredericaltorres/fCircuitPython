@@ -12,8 +12,13 @@
 - [Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
 - [Circuit Python firmwares](https://github.com/adafruit/circuitpython/releases/tag/3.1.2)
 
+### Python Libraries
+
+- [CircuitPython Libraries](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/circuitpython-libraries)
+- [lib .zip monthly release](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20190403)
+
 ### Editors
-[MU Editor](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor)
+- [MU Editor](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor)
 
 [Adafruit Learning CircuitPython](https://learn.adafruit.com/category/circuitpython)
 
