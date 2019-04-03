@@ -1,6 +1,7 @@
 # fCircuitPython
 
 * my CircuitPython Experiments
+* [Welcome to CircuitPython!](https://learn.adafruit.com/welcome-to-circuitpython/overview)
 
 ## Boards
 ### Adafruit Feather M0 Processor ~ Basic Proto
