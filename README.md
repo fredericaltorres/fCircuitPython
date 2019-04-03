@@ -12,12 +12,13 @@
 - [Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
 - [Circuit Python firmwares](https://github.com/adafruit/circuitpython/releases/tag/3.1.2)
 
-### Python Libraries
+### Python Libraries Compiled
 
 - [CircuitPython Libraries](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/circuitpython-libraries)
 - [lib .zip monthly release](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20190403)
 
-#### How to search for library source code
+### Python Libraries Source Code
+How to search for library source code
 * [adafruit_ht16k33, How to search for source of library](https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33)
 * [Adafruit_CircuitPython_IS31FL3731 How to search for the source of the library](https://github.com/search?q=org%3Aadafruit+adafruit_is31)
 
