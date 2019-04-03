@@ -15,9 +15,7 @@
 
 [Adafruit Feather M0 - circuitpython - Getting Started](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/kattni-circuitpython)
 
-### Firmware
-- [Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
-- [Circuit Python firmwares](https://github.com/adafruit/circuitpython/releases/tag/3.1.2)
+
 
 ### Python Libraries Compiled
 
@@ -38,6 +36,10 @@ How to search for library source code
 [Adafruit Learning CircuitPython](https://learn.adafruit.com/category/circuitpython)
 
 ## Installation
+
+### Firmware
+- [Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
+- [Circuit Python firmwares](https://github.com/adafruit/circuitpython/releases/tag/3.1.2)
 
 [Adafruit Feather M0 - circuitpython - Binary]
 https://github.com/adafruit/circuitpython/releases/download/3.1.2/adafruit-circuitpython-feather_m0_basic-3.1.2.bin)
