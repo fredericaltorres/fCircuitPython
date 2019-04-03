@@ -8,10 +8,11 @@
 
 [Adafruit Feather M0 Device]https://www.adafruit.com/product/2772
 
-[Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
+### Firmware
+- [Installing Circuit Python - Update firmware](https://learn.adafruit.com/welcome-to-circuitpython/installing-circuitpython)
+- [Circuit Python firmwares](https://github.com/adafruit/circuitpython/releases/tag/3.1.2)
 
-[Circuit Python Github](https://github.com/adafruit/circuitpython/releases/tag/3.1.2)
-
+### Editors
 [MU Editor](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor)
 
 [Adafruit Learning CircuitPython](https://learn.adafruit.com/category/circuitpython)
