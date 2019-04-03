@@ -18,11 +18,11 @@
 ### Python Libraries Compiled
 
 - [CircuitPython Libraries](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/circuitpython-libraries)
-- [lib .zip monthly release](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20190403)
+- [Lib .zip monthly release](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20190403)
 
 ### Python Libraries Source Code
 How to search for library source code
-* [adafruit_ht16k33, How to search for source of library](https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33)
+* [Adafruit_ht16k33, How to search for source of library](https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33)
 * [Adafruit_CircuitPython_IS31FL3731 How to search for the source of the library](https://github.com/search?q=org%3Aadafruit+adafruit_is31)
 
 #### Library Samples
@@ -41,10 +41,12 @@ How to search for library source code
 
 ### Installation With no UF2 boot loaded
 
-[non uf2 installation](https://learn.adafruit.com/welcome-to-circuitpython/non-uf2-installation)
+[Non uf2 installation](https://learn.adafruit.com/welcome-to-circuitpython/non-uf2-installation)
 [BOSSAC utility](https://github.com/shumatech/BOSSA/releases/tag/1.9.1)
 
+```bash
 bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\adafruit-circuitpython-feather_m0_basic-3.1.2.bin
+```
 
 ## MU Editor
 - [Tutorials](https://codewith.mu/en/tutorials/)
