@@ -3,7 +3,7 @@
 * my CircuitPython Experiments
 
 ## Boards
-### Adafruit Feather M0 Basic Proto
+### Adafruit Feather M0 Processor ~ Basic Proto
 - [Overview](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
 - [Product](https://www.adafruit.com/product/2772)
 
