@@ -17,6 +17,13 @@
 - [CircuitPython Libraries](https://learn.adafruit.com/adafruit-feather-m0-express-designed-for-circuit-python-circuitpython/circuitpython-libraries)
 - [lib .zip monthly release](https://github.com/adafruit/Adafruit_CircuitPython_Bundle/releases/tag/20190403)
 
+#### How to search for library source code
+* [adafruit_ht16k33, How to search for source of library](https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33)
+* [Adafruit_CircuitPython_IS31FL3731 How to search for the source of the library](https://github.com/search?q=org%3Aadafruit+adafruit_is31)
+
+#### Library Samples
+* [Adafruit_CircuitPython_IS31FL3731](https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731)
+
 ### Editors
 - [MU Editor](https://learn.adafruit.com/welcome-to-circuitpython/installing-mu-editor)
 
@@ -37,12 +44,7 @@ bossac -p COM8 -e -w -v -R --offset=0x2000 C:\DVT\CircuitPython\Firmware.bin\ada
 ## MU Editor
 - [Tutorials](https://codewith.mu/en/tutorials/)
 
-## How to search for library source code
-* [adafruit_ht16k33, How to search for source of library](https://github.com/search?q=org%3Aadafruit+adafruit_ht16k33)
-* [Adafruit_CircuitPython_IS31FL3731 How to search for the source of the library](https://github.com/search?q=org%3Aadafruit+adafruit_is31)
 
-## Library
-* [Adafruit_CircuitPython_IS31FL3731](https://github.com/adafruit/Adafruit_CircuitPython_IS31FL3731)
 
 ## Board
 [Adafruit Feather M0 Basic Proto](https://learn.adafruit.com/adafruit-feather-m0-basic-proto/overview)
