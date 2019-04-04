@@ -8,6 +8,7 @@ using ArduinoWindowsConsole;
 using DynamicSugar;
 using System.Runtime.InteropServices;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace test
 {
@@ -36,15 +37,26 @@ namespace test
             WriteLine("Ctrl+C", ConsoleColor.Cyan);
             ac.SendBuffer(new List<byte>() { 3 });
         }
+
         static void SendCommandCtrlD(SerialPortManager ac)
         {
             WriteLine("Ctrl+D", ConsoleColor.Cyan);
             ac.SendBuffer(new List<byte>() { 4 });
         }
+
         static void SendCommandChar(SerialPortManager ac, char c)
         {
             Write(c.ToString(), ConsoleColor.Cyan);
             ac.SendBuffer(new List<byte>() { (byte)c });
+        }
+
+        static void SendCommandChars(SerialPortManager ac, params char [] chars)
+        {
+            foreach(var c in chars)
+            {
+                SendCommandChar(ac, c);
+                Thread.Sleep(200);
+            }
         }
 
         static void SendCommand(SerialPortManager ac, string command)
@@ -57,8 +69,7 @@ namespace test
         {
             var m = $"{_comConfig.DeviceName} - port:{_comConfig.PortName}";
             Console.Title = m;
-
-            m += " - F1:Help, F3:Quit, F2:REPL, Ctrl-D:Resume execution";
+            m += " - F1:Help, Ctrl-Q:Quit, F2:REPL, Ctrl-D:Resume execution";
             WriteLine(m, ConsoleColor.Cyan);
         }
 
@@ -94,8 +105,7 @@ namespace test
                             case ConsoleKey.F1:  Console.Clear(); PrintHelp(); break;
                             case ConsoleKey.F2:
                                 SendCommandCtrlC(ac);
-                                SendCommandChar(ac, ' ');
-                                SendCommandChar(ac, '\r');
+                                SendCommandChars(ac, ' ', '\r', '\r');
                                 break;
                             case ConsoleKey.D:
                                 if (k.Modifiers == ConsoleModifiers.Control)
@@ -103,7 +113,12 @@ namespace test
                                 else
                                     SendCommandChar(ac, k.KeyChar);
                                 break;
-                            case ConsoleKey.F3: goOn = false; break;
+                            case ConsoleKey.Q:
+                                if (k.Modifiers == ConsoleModifiers.Control)
+                                    goOn = false;
+                                else
+                                    SendCommandChar(ac, k.KeyChar);
+                                break;
                             default:
                                 SendCommandChar(ac, k.KeyChar);
                                 break;
