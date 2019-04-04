@@ -58,7 +58,7 @@ namespace test
             var m = $"{_comConfig.DeviceName} - port:{_comConfig.PortName}";
             Console.Title = m;
 
-            m += " - F1:Help, F3:Quit, F2:Stop execution, Ctrl-D:Resume execution";
+            m += " - F1:Help, F3:Quit, F2:REPL, Ctrl-D:Resume execution";
             WriteLine(m, ConsoleColor.Cyan);
         }
 
@@ -84,7 +84,6 @@ namespace test
 
             using (var ac = new SerialPortManager(_comConfig.PortName, _comConfig.BaudRate))
             {
-                Console.WriteLine("Port Open");
                 while (goOn)
                 {
                     if (Console.KeyAvailable)
@@ -95,7 +94,8 @@ namespace test
                             case ConsoleKey.F1:  Console.Clear(); PrintHelp(); break;
                             case ConsoleKey.F2:
                                 SendCommandCtrlC(ac);
-                                WriteLine("Hit space to open REPL", ConsoleColor.Yellow);
+                                SendCommandChar(ac, ' ');
+                                SendCommandChar(ac, '\r');
                                 break;
                             case ConsoleKey.D:
                                 if (k.Modifiers == ConsoleModifiers.Control)
