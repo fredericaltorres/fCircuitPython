@@ -14,6 +14,7 @@ from digitalio import DigitalInOut, Direction, Pull
 import neopixel
 from NeoPixelStrip import NeoPixelStrip
 from cpAudioPlayer import cpAudioPlayer
+from cpButton import cpButton
 
 cpAudioPlayer().playTone([400, 500]).playTone([400, 500])
 
@@ -24,14 +25,8 @@ LED = DigitalInOut(board.D13)
 LED.direction = Direction.OUTPUT
 
 # Buttons Definition
-
-buttonA = DigitalInOut(board.BUTTON_A)
-buttonA.direction = Direction.INPUT
-buttonA.pull = Pull.DOWN
-
-buttonB = DigitalInOut(board.BUTTON_B)
-buttonB.direction = Direction.INPUT
-buttonB.pull = Pull.DOWN
+buttonA = cpButton(board.BUTTON_A)
+buttonB = cpButton(board.BUTTON_B)
 
 # Readind ADC value
 from analogio import AnalogIn
@@ -59,9 +54,9 @@ class Program:
             counter += 1
             time.sleep(.3)
             # Buttons
-            if buttonA.value:
+            if buttonA.isPressed():
                 print('button A down')
-            if buttonB.value:
+            if buttonB.isPressed():
                 print('button B down')
 
             print("Analog Voltage: %6.2f" % getVoltage(analogInA1))
