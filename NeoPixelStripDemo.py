@@ -4,25 +4,17 @@ from digitalio import DigitalInOut, Direction
 import neopixel
 from NeoPixelStrip import NeoPixelStrip
 
-"""
-dir(board)
-    ['A0', 'A1', 'A2', 'A3', 'A4', 'A5', 'SCK', 'MOSI', 'MISO', 'D0', 'RX', 'D1', 'TX', 'SDA', 'SCL', 
-    'D5', 'D6', 'D9', 'D10', 'D11', 'D12', 'D13', 'I2C', 'SPI', 'UART']
-"""
-
 MAX_NEO_PIXEL = 12
-neoPixelStrip = NeoPixelStrip(MAX_NEO_PIXEL, board.D5).fill((0, 0 ,0)).show().wait(1)
+neoPixelStrip = NeoPixelStrip(MAX_NEO_PIXEL, board.D5).fill((0, 0 ,0)).show().wait(.25)
 
 def rainbow_cycle(neoPixelStrip, allStrip = True, wait = 0.01):
-    jWheelColorStep = 4
-    for jWheelColorIndex in range(0, 256, jWheelColorStep):
+    wheelColorStep = 4
+    for wheelColorIndex in range(0, 256, wheelColorStep):
         for pixelIndex in range(0, neoPixelStrip.num_pixels):
             if allStrip:
-                color = neoPixelStrip.wheel((jWheelColorIndex) & 255)
+                color = neoPixelStrip.wheel((wheelColorIndex) & 255)
             else:
-                color = neoPixelStrip.wheel(
-                    ((pixelIndex * 256 // neoPixelStrip.num_pixels) + jWheelColorIndex) & 255
-                    )
+                color = neoPixelStrip.wheel( ((pixelIndex * 256 // neoPixelStrip.num_pixels) + wheelColorIndex) & 255 )
             neoPixelStrip.setPixel(pixelIndex, color)
         neoPixelStrip.show()
         time.sleep(wait)
@@ -38,17 +30,17 @@ class Program:
         counter = 0
         #rainbow_cycle(neoPixelStrip, allStrip = True)
         #rainbow_cycle(neoPixelStrip, allStrip = False)
-        rgbRed = (255, 0, 0)
-        rgbGreen = (0, 255, 0)
-        rgbBlue = (0, 0, 255)
-        neoPixelStrip.fill(rgbBlue).show()
+        rgbRed      = (255, 0, 0)
+        rgbGreen    = (0, 255, 0)
+        rgbBlue     = (0, 0, 255)
+        neoPixelStrip.animate(rgbRed, .05).wait(1)
         while True:
             neoPixelStrip.fill(rgbBlue if counter % 2 == 0 else rgbGreen).show()
             LED.value = not LED.value
             print("Led %s, count:%s" % (LED.value, counter))
             counter += 1
             time.sleep(1)
-# Main
 
-p = Program()
-p.run()
+# Main ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Program().run()
+
