@@ -19,7 +19,10 @@ from cpex.analogInput import AnalogInput
 
 analogInA1 = AnalogInput(board.A1)
 
-cpAudioPlayer().playTone([400, 500]).playTone([400, 500])
+audioPlayer = cpAudioPlayer()
+audioPlayer.playTone([400, 500]).playTone([400, 500])
+audioPlayer.playFile("laugh.wav")
+audioPlayer.playFile("rimshot.wav")
 
 MAX_NEO_PIXEL = 10
 neoPixelStrip = NeoPixelStrip(MAX_NEO_PIXEL, board.D8).fill((0, 0 ,0)).show().wait(.25)
