@@ -38,7 +38,7 @@ class NeoPixelStrip:
     def fill(self, color):
         self.pixels.fill(color)
         return self
-    def show(self):        
+    def show(self):
         self.pixels.show()
         return self
     def wait(self, duration):
@@ -46,4 +46,9 @@ class NeoPixelStrip:
         return self
     def setPixel(self, index, color):
         self.pixels[index] = color
+        return self
+    def animate(self, color, waitDuration):
+        for index in range(0, self.num_pixels):
+            self.setPixel(index, color)
+            self.wait(waitDuration)
         return self

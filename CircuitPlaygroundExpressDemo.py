@@ -15,6 +15,9 @@ import neopixel
 from cpex.NeoPixelStrip import NeoPixelStrip
 from cpex.cpAudioPlayer import cpAudioPlayer
 from cpex.cpButton import cpButton
+from cpex.analogInput import AnalogInput
+
+analogInA1 = AnalogInput(board.A1)
 
 cpAudioPlayer().playTone([400, 500]).playTone([400, 500])
 
@@ -28,12 +31,7 @@ LED.direction = Direction.OUTPUT
 buttonA = cpButton(board.BUTTON_A)
 buttonB = cpButton(board.BUTTON_B)
 
-# Readind ADC value
-from analogio import AnalogIn
-analogInA1 = AnalogIn(board.A1)
- 
-def getVoltage(pin):
-    return (pin.value * 3.3) / 65536
+
 
 rgbRed   = (255, 0, 0)
 rgbGreen = (0, 180, 0)
@@ -59,7 +57,6 @@ class Program:
             if buttonB.isPressed():
                 print('button B down')
 
-            print("Analog Voltage: %6.2f" % getVoltage(analogInA1))
+            print("Analog Voltage: %6.2f" % analogInA1.readVoltage())
 
 Program().run()
-
