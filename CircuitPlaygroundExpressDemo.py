@@ -13,13 +13,13 @@ import board
 from digitalio import DigitalInOut, Direction, Pull
 import neopixel
 from cpex.NeoPixelStrip import NeoPixelStrip
-from cpex.cpAudioPlayer import cpAudioPlayer
-from cpex.cpButton import cpButton
+from cpex.AudioPlayer import AudioPlayer
+from cpex.Button import Button
 from cpex.analogInput import AnalogInput
 
 analogInA1 = AnalogInput(board.A1)
 
-audioPlayer = cpAudioPlayer()
+audioPlayer = AudioPlayer()
 audioPlayer.playTone([400, 500]).playTone([400, 500])
 audioPlayer.playFile("laugh.wav")
 audioPlayer.playFile("rimshot.wav")
@@ -31,10 +31,8 @@ LED = DigitalInOut(board.D13)
 LED.direction = Direction.OUTPUT
 
 # Buttons Definition
-buttonA = cpButton(board.BUTTON_A)
-buttonB = cpButton(board.BUTTON_B)
-
-
+buttonA = Button(board.BUTTON_A)
+buttonB = Button(board.BUTTON_B)
 
 rgbRed   = (255, 0, 0)
 rgbGreen = (0, 180, 0)
