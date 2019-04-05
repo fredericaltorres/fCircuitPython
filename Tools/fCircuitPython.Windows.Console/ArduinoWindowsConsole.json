@@ -1,5 +1,5 @@
 {
-  "PortName": "COM12",
+  "PortName": "COM15",
   "DeviceName": "fCircuit Python Console",
   "BaudRate": 115200
 }

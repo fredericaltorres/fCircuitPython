@@ -12,9 +12,9 @@ import time
 import board
 from digitalio import DigitalInOut, Direction, Pull
 import neopixel
-from NeoPixelStrip import NeoPixelStrip
-from cpAudioPlayer import cpAudioPlayer
-from cpButton import cpButton
+from cpex.NeoPixelStrip import NeoPixelStrip
+from cpex.cpAudioPlayer import cpAudioPlayer
+from cpex.cpButton import cpButton
 
 cpAudioPlayer().playTone([400, 500]).playTone([400, 500])
 

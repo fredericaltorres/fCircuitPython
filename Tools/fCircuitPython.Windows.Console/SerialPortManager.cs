@@ -52,10 +52,6 @@ namespace ArduinoLibrary
                     this._serialPort.RtsEnable = true;
                     this._serialPort.DtrEnable = true;
                     
-                    var d = this._serialPort.DataBits;
-                    var s = this._serialPort.NewLine;
-                    var size = this._serialPort.ReadBufferSize;
-                    var timeout = this._serialPort.ReadTimeout;
                     this._serialPort.ReadTimeout = 2000;
 
                     this._serialPort.Open();
@@ -87,11 +83,12 @@ namespace ArduinoLibrary
         void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
         {
             var s = this._serialPort.ReadExisting();
-            _textReceived.Append(s);
+            this._textReceived.Append(s);
 
-            if (_textReceived.ToString().EndsWith("\n"))
+            var textStr = this._textReceived.ToString();
+            if (textStr.EndsWith("\n"))
             {
-                var text = _textReceived.ToString().Replace("\n", "");
+                var text = textStr.Substring(0, textStr.Length - 1);
                 ReceivedMessages.Enqueue(text);
                 _textReceived.Clear();
             }
