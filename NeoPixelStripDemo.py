@@ -2,10 +2,12 @@ import time
 import board
 from digitalio import DigitalInOut, Direction
 import neopixel
-from NeoPixelStrip import NeoPixelStrip
+from cpex.NeoPixelStrip import NeoPixelStrip
+from cpex.Button import Button
 
 MAX_NEO_PIXEL = 12
-neoPixelStrip = NeoPixelStrip(MAX_NEO_PIXEL, board.D5).fill((0, 0 ,0)).show().wait(.25)
+NEO_PIXEL_PIN = board.NEOPIXEL
+neoPixelStrip = NeoPixelStrip(MAX_NEO_PIXEL, NEO_PIXEL_PIN).fill((0, 0 ,0)).show().wait(.25)
 
 def rainbow_cycle(neoPixelStrip, allStrip = True, wait = 0.01):
     wheelColorStep = 4
@@ -34,13 +36,20 @@ class Program:
         rgbGreen    = (0, 255, 0)
         rgbBlue     = (0, 0, 255)
         neoPixelStrip.animate(rgbRed, .05).wait(1)
+        # Buttons Definition
+        buttonA = Button(board.BUTTON_A)
+        buttonB = Button(board.BUTTON_B)
         while True:
             neoPixelStrip.fill(rgbBlue if counter % 2 == 0 else rgbGreen).show()
             LED.value = not LED.value
             print("Led %s, count:%s" % (LED.value, counter))
             counter += 1
             time.sleep(1)
+            if buttonA.isPressed():
+                print('button A down')
+            if buttonB.isPressed():
+                print('button B down')
 
 # Main ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+print('starting NeoPixelStripDemo.py')
 Program().run()
-

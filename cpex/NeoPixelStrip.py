@@ -10,11 +10,13 @@ class NeoPixelStrip:
         NubioMCU sample 
             https://github.com/madeintheusb/NusbioMCU/blob/master/NusbioPixelConsole/Program.cs
     """
-    def __init__(self, num_pixels, pin = board.D5):
+    def __init__(self, num_pixels, pin = board.D5, brightness = 0.02):
+        print("Init Strip num_pixels:%s, pin:%s" % (num_pixels, pin))
         self.pixel_pin = pin; # Pin require PWM
         self.num_pixels = num_pixels
         self.ORDER = neopixel.GRB
-        self.pixels = neopixel.NeoPixel(self.pixel_pin, self.num_pixels, brightness=0.2, auto_write=False, pixel_order=self.ORDER)
+        self.pixels = neopixel.NeoPixel(self.pixel_pin, self.num_pixels, brightness=brightness, auto_write=False, pixel_order=self.ORDER)
+
     def wheel(self,pos):
         # Input a value 0 to 255 to get a color value.
         # The colours are a transition r - g - b - back to r.
@@ -35,20 +37,32 @@ class NeoPixelStrip:
             g = int(pos*3)
             b = int(255 - pos*3)
         return (r, g, b) if self.ORDER == neopixel.RGB or self.ORDER == neopixel.GRB else (r, g, b, 0)
+
     def fill(self, color):
         self.pixels.fill(color)
         return self
+
     def show(self):
         self.pixels.show()
         return self
+
     def wait(self, duration):
         time.sleep(duration)
         return self
+
     def setPixel(self, index, color):
         self.pixels[index] = color
         return self
+
     def animate(self, color, waitDuration):
         for index in range(0, self.num_pixels):
             self.setPixel(index, color)
+            self.show()
             self.wait(waitDuration)
+        return self
+
+    def animateColors(self, colors, waitDuration):
+        for color in colors: 
+            self.animate(color, waitDuration).show().wait(waitDuration)
+            self.wait(waitDuration * 5)
         return self
